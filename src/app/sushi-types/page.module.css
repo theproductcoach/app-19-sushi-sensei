@@ -1,18 +1,23 @@
 .main {
-    min-height: 100vh;
-    background-color: #f9fafb;
+    min-height: calc(100vh - var(--nav-height));
+        background-color: var(--background);
 }
 
 .hero {
-    background: linear-gradient(to bottom, #1a1a1a, #333333);
-    color: white;
+    background: var(--indigo);
+        background-image: url('/wood-texture-dark.png');
+        background-blend-mode: overlay;
+        color: var(--cream);
     padding: 4rem 1rem;
     text-align: center;
+    border-bottom: 2px solid var(--wood-dark);
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    font-family: "Noto Serif JP", serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero p {
@@ -23,7 +28,7 @@
 }
 
 .content {
-    max-width: 1200px;
+    max-width: var(--container-width);
     margin: 0 auto;
     padding: 2rem 1rem;
     display: grid;
@@ -32,18 +37,21 @@
 }
 
 .filters {
-    background: white;
+    background: var(--cream);
     padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: var(--card-border-radius);
+        box-shadow: 0 4px 6px var(--shadow);
     height: fit-content;
     position: sticky;
-    top: 2rem;
+    top: calc(var(--nav-height) + 2rem);
+        border: 1px solid var(--border);
 }
 
 .filters h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    color: var(--text-primary);
+        font-family: "Noto Serif JP", serif;
 }
 
 .filters ul {
@@ -57,45 +65,47 @@
     cursor: pointer;
     border-radius: 0.25rem;
     transition: all 0.2s;
+    color: var(--text-secondary);
 }
 
 .filters li:hover {
-    background-color: #f3f4f6;
+    background-color: var(--paper-light);
 }
 
 .filters li.active {
-    background-color: #dc2626;
-    color: white;
+    background-color: var(--vermilion);
+        color: var(--cream);
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 2rem;
 }
 
 .card {
-    background: white;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    composes: card from global;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
 }
 
 .imageContainer {
     position: relative;
-    height: 200px;
+    height: 250px;
+        overflow: hidden;
+        border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
 }
 
 .image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+    }
+    
+    .card:hover .image {
+        transform: scale(1.05);
 }
 
 .category {
@@ -103,43 +113,50 @@
     top: 1rem;
     right: 1rem;
     background: rgba(0, 0, 0, 0.75);
-    color: white;
+    color: var(--cream);
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.875rem;
+    backdrop-filter: blur(4px);
 }
 
-.card .content {
+.cardContent {
     padding: 1.5rem;
-    display: block;
+    display: flex;
+        flex-direction: column;
+        flex: 1;
 }
 
 .card h3 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
+    color: var(--vermilion);
+        font-family: "Noto Serif JP", serif;
 }
 
 .japaneseName {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 0.875rem;
     margin-bottom: 1rem;
+    font-family: "Noto Serif JP", serif;
 }
 
 .description {
-    color: #333;
+    color: var(--text-primary);
     margin-bottom: 1.5rem;
     line-height: 1.5;
 }
 
 .ingredients {
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--border);
     padding-top: 1rem;
+    margin-top: auto;
 }
 
 .ingredients h4 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
-    color: #666;
+    color: var(--text-secondary);
 }
 
 .ingredients ul {
@@ -151,11 +168,11 @@
 }
 
 .ingredients li {
-    background: #f3f4f6;
+    background: var(--paper-light);
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.875rem;
-    color: #666;
+    color: var(--text-secondary);
 }
 
 @media (max-width: 768px) {
@@ -163,6 +180,13 @@
         grid-template-columns: 1fr;
     }
 
+        .grid {
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        }
+    
+        .imageContainer {
+            height: 200px;
+        }
     .filters {
         position: static;
         margin-bottom: 2rem;

@@ -1,38 +1,30 @@
 :root {
   --font-geist-sans: var(--font-geist-sans);
-    --font-geist-mono: var(--font-geist-mono);
+  --font-geist-mono: var(--font-geist-mono);
     --background: #faf7f2;
     --foreground: #1a0f0f;
   
-    /* Traditional Japanese colors */
+  /* Traditional Japanese colors */
     --indigo: #1D2B53;
-    /* Traditional Japanese indigo (藍色, ai-iro) */
-    --vermilion: #D13525;
-    /* Traditional vermilion (朱色, shu-iro) */
-    --cream: #F7F1E5;
-    /* Warm cream color for paper-like backgrounds */
-    --wood-dark: #2C1810;
-    /* Dark wood color */
-    --wood-light: #8B4513;
-    /* Light wood color */
+  --vermilion: #D13525;
+  --cream: #F7F1E5;
+  --wood-dark: #2C1810;
+  --wood-light: #8B4513;
   
-    /* Additional Colors */
+  /* Additional Colors */
     --text-primary: #1a0f0f;
     --text-secondary: #4a4a4a;
     --accent: var(--vermilion);
-    --border: #ddd;
+  --border: rgba(0, 0, 0, 0.1);
     --shadow: rgba(0, 0, 0, 0.1);
   
-    /* Paper texture */
+  /* Paper texture */
     --paper-light: #f5f2ed;
     --paper-medium: #e8e2d9;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Layout */
+    --nav-height: 4rem;
+    --container-width: 1200px;
+    --card-border-radius: 1rem;
 }
 
 html,
@@ -40,7 +32,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   background-color: var(--background);
-    color: var(--text-primary);
+  color: var(--text-primary);
     background-image: url('/paper-texture.png');
     background-repeat: repeat;
     background-blend-mode: overlay;
@@ -48,12 +40,16 @@ body {
 }
 
 body {
-  padding-top: 4rem;
-    /* Space for fixed navigation */
+  padding-top: var(--nav-height);
+    min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  background-color: var(--background);
+  min-height: calc(100vh - var(--nav-height));
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -72,6 +68,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-geist-sans);
+  color: var(--text-primary);
 }
 
 img {
@@ -79,6 +76,42 @@ img {
   height: auto;
 }
 
+/* Shared Components */
+.card {
+  background: var(--cream);
+  border-radius: var(--card-border-radius);
+  padding: 2rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 6px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/paper-texture.png');
+  background-repeat: repeat;
+  background-blend-mode: overlay;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.card>* {
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px var(--shadow);
+  border-color: var(--vermilion);
+}
 /* Traditional Japanese section styling */
 .section-divider {
   position: relative;
@@ -86,9 +119,9 @@ img {
   margin: 2rem 0;
   height: 1px;
   background: linear-gradient(to right,
-      transparent,
-      var(--wood-dark),
-      transparent);
+        transparent,
+          var(--wood-dark),
+          transparent);
 }
 
 .section-divider::before {
@@ -175,10 +208,5 @@ img {
   .jp-button {
     padding: 0.6rem 1.5rem;
     font-size: 1rem;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
   }
 }

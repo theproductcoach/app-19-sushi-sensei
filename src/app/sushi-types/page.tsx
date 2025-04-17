@@ -20,7 +20,7 @@ const sushiTypes: SushiType[] = [
       "Fresh salmon served on hand-pressed vinegared rice. One of the most popular nigiri choices worldwide.",
     ingredients: ["Salmon", "Sushi rice", "Wasabi"],
     category: "Nigiri",
-    imageUrl: "/sushi/nigiri-salmon.jpg",
+    imageUrl: "/sushi/nigiri-salmon.png",
   },
   {
     id: "maki-california",
@@ -37,7 +37,7 @@ const sushiTypes: SushiType[] = [
       "Tobiko",
     ],
     category: "Maki",
-    imageUrl: "/sushi/california-roll.jpg",
+    imageUrl: "/sushi/california-roll.png",
   },
   {
     id: "sashimi-tuna",
@@ -47,7 +47,7 @@ const sushiTypes: SushiType[] = [
       "Premium cuts of raw tuna served without rice. The purest way to enjoy the flavor of the fish.",
     ingredients: ["Bluefin tuna"],
     category: "Sashimi",
-    imageUrl: "/sushi/tuna-sashimi.jpg",
+    imageUrl: "/sushi/tuna-sashimi.png",
   },
   {
     id: "temaki-spicy",
@@ -57,7 +57,7 @@ const sushiTypes: SushiType[] = [
       "Hand-rolled cone sushi with spicy tuna mixture. A perfect blend of heat and fresh fish.",
     ingredients: ["Tuna", "Spicy mayo", "Nori", "Sushi rice"],
     category: "Temaki",
-    imageUrl: "/sushi/spicy-tuna-temaki.jpg",
+    imageUrl: "/sushi/spicy-tuna-temaki.png",
   },
   {
     id: "uramaki-dragon",
@@ -74,7 +74,7 @@ const sushiTypes: SushiType[] = [
       "Eel sauce",
     ],
     category: "Uramaki",
-    imageUrl: "/sushi/dragon-roll.jpg",
+    imageUrl: "/sushi/dragon-roll.png",
   },
   {
     id: "inari",
@@ -84,7 +84,7 @@ const sushiTypes: SushiType[] = [
       "Sushi rice stuffed in sweet, fried tofu pouches. A vegetarian favorite with a unique sweet and savory taste.",
     ingredients: ["Fried tofu pouch", "Sushi rice", "Sesame seeds"],
     category: "Inari",
-    imageUrl: "/sushi/inari-sushi.jpg",
+    imageUrl: "/sushi/inari-sushi.png",
   },
 ];
 
@@ -119,13 +119,14 @@ export default function SushiTypes() {
                 <Image
                   src={sushi.imageUrl}
                   alt={sushi.name}
-                  width={300}
-                  height={200}
+                  width={400}
+                  height={300}
                   className={styles.image}
+                  priority={sushi.id === "nigiri-salmon"}
                 />
                 <span className={styles.category}>{sushi.category}</span>
               </div>
-              <div className={styles.content}>
+              <div className={styles.cardContent}>
                 <h3>{sushi.name}</h3>
                 <p className={styles.japaneseName}>{sushi.japameseName}</p>
                 <p className={styles.description}>{sushi.description}</p>

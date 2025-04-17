@@ -3,20 +3,20 @@ import styles from "./page.module.css";
 export default function EtiquettePage() {
   return (
     <main className={styles.main}>
-      <div className={styles.hero}>
+      <section className={styles.hero}>
         <h1>Sushi Dining Etiquette</h1>
         <p>
           Master the art of proper sushi dining with our comprehensive guide to
           Japanese sushi etiquette
         </p>
-      </div>
+      </section>
 
       <div className={styles.content}>
         <section className={styles.section}>
-          <h2>Essential Do's and Don'ts</h2>
+          <h2>Essential Do&apos;s and Don&apos;ts</h2>
           <div className={styles.grid}>
             <div className={styles.card}>
-              <h3>Do's</h3>
+              <h3>Do&apos;s</h3>
               <ul className={styles.list}>
                 <li>
                   <strong>Clean Hands</strong> Use the provided oshibori (hot
@@ -32,27 +32,27 @@ export default function EtiquettePage() {
                 </li>
                 <li>
                   <strong>Appreciation</strong> Thank the chef by saying
-                  "Gochisousama deshita" after finishing
+                  &lsquo;Gochisousama deshita&lsquo; after finishing
                 </li>
               </ul>
             </div>
             <div className={styles.card}>
-              <h3>Don'ts</h3>
+              <h3>Don&apos;ts</h3>
               <ul className={styles.list}>
                 <li>
-                  <strong>Wasabi Mix</strong> Don't mix wasabi into your soy
+                  <strong>Wasabi Mix</strong> Don&apos;t mix wasabi into your soy
                   sauce
                 </li>
                 <li>
-                  <strong>Rice First</strong> Don't dip the rice side into soy
+                  <strong>Rice First</strong> Don&apos;t dip the rice side into soy
                   sauce
                 </li>
                 <li>
-                  <strong>Chopsticks</strong> Don't rub them together or point
+                  <strong>Chopsticks</strong> Don&apos;t rub them together or point
                   them at others
                 </li>
                 <li>
-                  <strong>Piece Size</strong> Don't cut pieces in half; eat them
+                  <strong>Piece Size</strong> Don&apos;t cut pieces in half; eat them
                   in one bite
                 </li>
               </ul>
@@ -74,7 +74,7 @@ export default function EtiquettePage() {
             <div className={styles.card}>
               <h3>Maki Rolls</h3>
               <p>
-                Eat maki rolls in one bite when possible. For larger rolls, it's
+                Eat maki rolls in one bite when possible. For larger rolls, it&apos;s
                 acceptable to eat in two bites. No need to dip if sauce is
                 already applied.
               </p>
@@ -83,7 +83,7 @@ export default function EtiquettePage() {
               <h3>Ginger (Gari)</h3>
               <p>
                 Use pickled ginger as a palate cleanser between different types
-                of sushi. Don't eat it on top of your sushi or mix it with other
+                of sushi. Don&apos;t eat it on top of your sushi or mix it with other
                 ingredients.
               </p>
             </div>
@@ -104,13 +104,13 @@ export default function EtiquettePage() {
               nigiri; order rolls from the server
             </li>
             <li>
-              <strong>Chef's Choice</strong>
-              Consider ordering "omakase" to experience the chef's selection of
-              the day's best offerings
+              <strong>Chef&apos;s Choice</strong>
+              Consider ordering &lsquo;omakase&lsquo; to experience the chef&apos;s selection of
+              the day&apos;s best offerings
             </li>
             <li>
               <strong>Pace</strong>
-              Eat each piece soon after it's served; don't let sushi sit for too
+              Eat each piece soon after it&apos;s served; don&apos;t let sushi sit for too
               long
             </li>
           </ul>
@@ -130,7 +130,7 @@ export default function EtiquettePage() {
             <div className={styles.card}>
               <h3>Drinking Customs</h3>
               <p>
-                When drinking sake or beer, it's polite to pour for others and
+                When drinking sake or beer, it&apos;s polite to pour for others and
                 let them pour for you. Never pour your own drink first.
               </p>
             </div>

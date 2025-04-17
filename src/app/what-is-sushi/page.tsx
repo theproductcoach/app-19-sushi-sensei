@@ -10,7 +10,7 @@ export default function WhatIsSushiPage() {
         <div className={styles.hero}>
           <h1>What is Sushi?</h1>
           <p>
-            A beginner's guide to understanding and appreciating Japanese sushi
+            A beginner&apos;s guide to understanding and appreciating Japanese sushi
           </p>
         </div>
 
@@ -68,7 +68,7 @@ export default function WhatIsSushiPage() {
               <div className={styles.card}>
                 <h3>Uramaki</h3>
                 <p>
-                  "Inside-out" rolls with rice on the outside and nori inside.
+                &lsquo;Inside-out&lsquo; rolls with rice on the outside and nori inside.
                   Popular worldwide, including the famous California Roll.
                 </p>
               </div>
@@ -91,7 +91,7 @@ export default function WhatIsSushiPage() {
               </li>
               <li>
                 <strong>Soy Sauce</strong>A salty, fermented condiment used for
-                dipping. Look for "shoyu" at sushi restaurants
+                dipping. Look for &lsquo;shoyu&lsquo; at sushi restaurants
               </li>
               <li>
                 <strong>Ginger</strong>
@@ -127,8 +127,8 @@ export default function WhatIsSushiPage() {
               <div className={styles.card}>
                 <h3>Ask Questions</h3>
                 <p>
-                  Don't be afraid to ask your sushi chef or server for
-                  recommendations and explanations. They're usually happy to
+                  Don&apos;t be afraid to ask your sushi chef or server for
+                  recommendations and explanations. They&apos;re usually happy to
                   guide beginners.
                 </p>
               </div>

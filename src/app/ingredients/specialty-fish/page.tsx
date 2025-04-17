@@ -13,7 +13,7 @@ const specialtyFish: SeafoodItem[] = [
     texture: "Very tender, melts in your mouth",
     seasonality: ["Winter"],
     commonPreparations: ["Nigiri", "Premium sashimi"],
-    imageUrl: "/ingredients/otoro.jpg",
+    imageUrl: "/ingredients/otoro.png",
     nutrition: {
       calories: "225 per 100g",
       omega3: "Very high",
@@ -30,7 +30,7 @@ const specialtyFish: SeafoodItem[] = [
     texture: "Creamy, custard-like",
     seasonality: ["Winter", "Spring"],
     commonPreparations: ["Nigiri", "Gunkan-maki", "Special rolls"],
-    imageUrl: "/ingredients/uni.jpg",
+    imageUrl: "/ingredients/uni.png",
     nutrition: {
       protein: "13g per 100g",
       calories: "120 per 100g",
@@ -47,7 +47,7 @@ const specialtyFish: SeafoodItem[] = [
     texture: "Firm but tender",
     seasonality: ["Spring", "Summer"],
     commonPreparations: ["Nigiri", "Sashimi", "Kobujime (kelp-cured)"],
-    imageUrl: "/ingredients/kinmedai.jpg",
+    imageUrl: "/ingredients/kinmedai.png",
   },
   {
     id: "shima-aji",
@@ -60,7 +60,7 @@ const specialtyFish: SeafoodItem[] = [
     texture: "Firm and crisp",
     seasonality: ["Summer", "Fall"],
     commonPreparations: ["Nigiri", "Sashimi"],
-    imageUrl: "/ingredients/shima-aji.jpg",
+    imageUrl: "/ingredients/shima-aji.png",
   },
 ];
 

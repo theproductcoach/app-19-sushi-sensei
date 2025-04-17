@@ -85,7 +85,7 @@ export default function CulturalContextPage() {
               <p>
                 Sushi presentation often incorporates seasonal elements, from
                 the garnishes used to the serving vessels chosen, reflecting
-                Japan's deep connection to nature.
+                Japan&apos;s deep connection to nature.
               </p>
             </div>
             <div className={styles.card}>

@@ -6,36 +6,36 @@ export default function CulturePage() {
       <section className={styles.hero}>
         <h1>Sushi Culture</h1>
         <p>
-          Discover the rich history and traditions behind Japan's most iconic
+          Discover the rich history and traditions behind Japan&apos;s most iconic
           cuisine
         </p>
       </section>
 
-      <section className={styles.content}>
-        <div className={styles.section}>
+      <div className={styles.content}>
+        <section className={styles.section}>
           <h2>History</h2>
           <p>
-            Sushi's origins date back to Southeast Asia, where fish was
+            Sushi&apos;s origins date back to Southeast Asia, where fish was
             fermented in rice to preserve it. This method spread to Japan around
             the 8th century. The modern form of sushi (nigiri-zushi) was
             invented in Edo (now Tokyo) around 1824 by Hanaya Yohei as a
             fast-food option for workers.
           </p>
-        </div>
+        </section>
 
-        <div className={styles.section}>
+        <section className={styles.section}>
           <h2>Cultural Significance</h2>
           <p>
-            Sushi in Japan represents more than just food—it's an art form and
+            Sushi in Japan represents more than just food—it&apos;s an art form and
             cultural institution. Sushi chefs (itamae) train for years to master
             their craft, learning everything from knife skills to rice
             preparation. The preparation and presentation of sushi embodies many
             Japanese cultural values: precision, attention to detail, and
             respect for ingredients.
           </p>
-        </div>
+        </section>
 
-        <div className={styles.section}>
+        <section className={styles.section}>
           <h2>Types of Sushi Establishments</h2>
           <div className={styles.grid}>
             <div className={styles.card}>
@@ -43,7 +43,7 @@ export default function CulturePage() {
               <p>
                 Intimate establishments where customers sit at a counter and
                 interact directly with the sushi chef. These restaurants often
-                serve omakase (chef's choice) meals.
+                serve omakase (chef&apos;s choice) meals.
               </p>
             </div>
             <div className={styles.card}>
@@ -63,9 +63,9 @@ export default function CulturePage() {
               </p>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className={styles.section}>
+        <section className={styles.section}>
           <h2>Regional Variations</h2>
           <p>
             Different regions of Japan have developed their own unique sushi
@@ -77,7 +77,7 @@ export default function CulturePage() {
               and tends to use more cured and cooked ingredients
             </li>
             <li>
-              <strong>Edo Style:</strong> The Tokyo style that's most recognized
+              <strong>Edo Style:</strong> The Tokyo style that&apos;s most recognized
               globally, featuring nigiri-zushi with fresh fish
             </li>
             <li>
@@ -85,9 +85,9 @@ export default function CulturePage() {
               like mentaiko (spicy cod roe)
             </li>
           </ul>
-        </div>
+        </section>
 
-        <div className={styles.section}>
+        <section className={styles.section}>
           <h2>Modern Influence</h2>
           <p>
             While sushi has spread globally and evolved to incorporate local
@@ -96,8 +96,8 @@ export default function CulturePage() {
             central to sushi culture. The global popularity of sushi has helped
             spread appreciation for Japanese cuisine and culture worldwide.
           </p>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   );
 }

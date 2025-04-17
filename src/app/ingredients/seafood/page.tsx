@@ -14,7 +14,7 @@ const otherSeafood: SeafoodItem[] = [
     texture: "Firm and snappy",
     seasonality: ["Year-round"],
     commonPreparations: ["Nigiri", "Tempura rolls", "Sushi rolls"],
-    imageUrl: "/ingredients/ebi.jpg",
+    imageUrl: "/ingredients/ebi.png",
     nutrition: {
       protein: "24g per 100g",
       calories: "85 per 100g",
@@ -30,7 +30,7 @@ const otherSeafood: SeafoodItem[] = [
     texture: "Firm eggs that pop in your mouth",
     seasonality: ["Fall", "Winter"],
     commonPreparations: ["Gunkan-maki", "Rice bowls", "Garnish"],
-    imageUrl: "/ingredients/ikura.jpg",
+    imageUrl: "/ingredients/ikura.png",
     nutrition: {
       protein: "29g per 100g",
       omega3: "Very high",
@@ -48,7 +48,7 @@ const otherSeafood: SeafoodItem[] = [
     texture: "Tender and buttery",
     seasonality: ["Winter", "Spring"],
     commonPreparations: ["Nigiri", "Sashimi", "Special rolls"],
-    imageUrl: "/ingredients/hotate.jpg",
+    imageUrl: "/ingredients/hotate.png",
     nutrition: {
       protein: "16g per 100g",
       calories: "80 per 100g",
@@ -65,7 +65,7 @@ const otherSeafood: SeafoodItem[] = [
     texture: "Tender yet chewy",
     seasonality: ["Year-round"],
     commonPreparations: ["Nigiri", "Sashimi", "Sunomono"],
-    imageUrl: "/ingredients/tako.jpg",
+    imageUrl: "/ingredients/tako.png",
     nutrition: {
       protein: "15g per 100g",
       calories: "74 per 100g",

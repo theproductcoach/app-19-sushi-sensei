@@ -9,8 +9,8 @@ export default function Home() {
       <section className={styles.hero}>
         <div className={styles.heroBackground}>
           <Image
-            src="/sushi-pattern.jpg"
-            alt="Sushi Pattern Background"
+            src="/home-bg.png"
+            alt="Japanese Background Pattern"
             fill
             className={styles.backgroundImage}
             priority

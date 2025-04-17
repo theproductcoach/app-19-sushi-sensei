@@ -30,10 +30,9 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
-  min-height: 100vh;
-    background-color: #ffffff;
+  min-height: calc(100vh - 4rem);
+    /* Subtract navigation height */
+    background-color: var(--background);
 }
 
 .main ol {
@@ -177,6 +176,7 @@ a.secondary {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background-color: var(--paper-light);
 }
 
 .heroBackground {
@@ -190,7 +190,7 @@ a.secondary {
 
 .backgroundImage {
   object-fit: cover;
-  opacity: 0.15;
+  opacity: 0.5;
 }
 
 .heroContent {
@@ -203,45 +203,47 @@ a.secondary {
 .heroContent h1 {
   font-size: 4rem;
   font-weight: 700;
-  color: #FF0000;
+  color: var(--vermilion);
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: "Noto Serif JP", serif;
 }
 
 .heroContent p {
   font-size: 1.5rem;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 2rem;
 }
 
 .button {
   display: inline-block;
-  background-color: #FF0000;
-  color: white;
+  background-color: var(--vermilion);
+    color: var(--cream);
   padding: 1rem 2.5rem;
   border-radius: 50px;
   font-size: 1.2rem;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  border: 2px solid #FF0000;
-  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
+  border: 2px solid var(--vermilion);
+    box-shadow: 0 4px 6px var(--shadow);
 }
 
 .button:hover {
-  background-color: #E60000;
+  background-color: var(--indigo);
+    border-color: var(--indigo);
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(255, 0, 0, 0.2);
+  box-shadow: 0 6px 12px var(--shadow);
 }
 
 /* Features Section */
 .features {
   padding: 5rem 0;
-  background-color: #ffffff;
+  background-color: var(--background);
 }
 
 .features.altBackground {
-  background-color: #FFF5F5;
+  background-color: var(--paper-light);
 }
 
 .container {
@@ -253,8 +255,9 @@ a.secondary {
 .features h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #FF0000;
+  color: var(--vermilion);
   margin-bottom: 3rem;
+  font-family: "Noto Serif JP", serif;
 }
 
 .featureGrid {
@@ -265,42 +268,27 @@ a.secondary {
 }
 
 .featureCard {
-  background: white;
-  padding: 2rem;
-  border-radius: 1rem;
+  composes: card from global;
   text-align: center;
   text-decoration: none;
   color: inherit;
-  transition: all 0.3s ease;
-  border: 1px solid #FFE5E5;
-  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.05);
-}
-
-.featureCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(255, 0, 0, 0.1);
-  border-color: #FF0000;
-}
-
-.featureIcon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
 }
 
 .featureCard h3 {
-  color: #FF0000;
+  color: var(--vermilion);
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  font-family: "Noto Serif JP", serif;
 }
 
 .featureCard p {
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
 /* Quick Start Guide */
 .quickStart {
-  background-color: #FFF5F5;
+  background-color: var(--paper-light);
   padding: 5rem 0;
 }
 
@@ -312,38 +300,28 @@ a.secondary {
 }
 
 .stepCard {
-  background: white;
-  padding: 2rem;
-  border-radius: 1rem;
+  composes: card from global;
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
-  transition: all 0.3s ease;
-  border: 1px solid #FFE5E5;
-  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.05);
-}
-
-.stepCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(255, 0, 0, 0.1);
-  border-color: #FF0000;
 }
 
 .stepNumber {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #FF0000;
+  color: var(--vermilion);
   opacity: 0.8;
 }
 
 .stepContent h3 {
-  color: #FF0000;
+  color: var(--vermilion);
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
+  font-family: "Noto Serif JP", serif;
 }
 
 .stepContent p {
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 

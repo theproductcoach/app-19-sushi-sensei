@@ -1,19 +1,25 @@
 .main {
-    min-height: 100vh;
-    background-color: #f9fafb;
+    min-height: calc(100vh - var(--nav-height));
+        background-color: var(--background);
+        padding-bottom: 2rem;
 }
 
 .hero {
-    background: linear-gradient(to bottom, #1a1a1a, #333333);
-    color: white;
+    background: var(--indigo);
+        background-image: url('/wood-texture-dark.png');
+        background-blend-mode: overlay;
+        color: var(--cream);
     padding: 4rem 1rem;
     text-align: center;
     margin-bottom: 2rem;
+    border-bottom: 2px solid var(--wood-dark);
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    font-family: "Noto Serif JP", serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero p {
@@ -24,29 +30,52 @@
 }
 
 .content {
-    max-width: 1200px;
+    max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 1rem 2rem;
+    padding: 0 1rem;
 }
 
 .section {
-    background: white;
-    border-radius: 1rem;
+    background: var(--paper-light);
+        border-radius: var(--card-border-radius);
     padding: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+        box-shadow: 0 2px 4px var(--shadow);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('/paper-texture.png');
+        background-repeat: repeat;
+        background-blend-mode: overlay;
+        opacity: 0.5;
+        z-index: 0;
+    }
+    
+    .section>* {
+        position: relative;
+        z-index: 1;
 }
 
 .section h2 {
-    color: #1a1a1a;
+    color: var(--vermilion);
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 2px solid var(--wood-dark);
     padding-bottom: 0.5rem;
+    font-family: "Noto Serif JP", serif;
 }
 
 .section p {
-    color: #333;
+    color: var(--text-primary);
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
@@ -59,25 +88,50 @@
 }
 
 .card {
-    background: #f8f9fa;
+    background: var(--cream);
     padding: 1.5rem;
-    border-radius: 0.5rem;
-    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: var(--card-border-radius);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border: 1px solid var(--border);
+        box-shadow: 0 2px 4px var(--shadow);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('/paper-texture.png');
+        background-repeat: repeat;
+        background-blend-mode: overlay;
+        opacity: 0.3;
+        z-index: 0;
+    }
+    
+    .card>* {
+        position: relative;
+        z-index: 1;
 }
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px var(--shadow);
+        border-color: var(--vermilion);
 }
 
 .card h3 {
-    color: #1a1a1a;
+    color: var(--vermilion);
     font-size: 1.25rem;
     margin-bottom: 1rem;
+    font-family: "Noto Serif JP", serif;
 }
 
 .card p {
-    color: #666;
+    color: var(--text-primary);
     line-height: 1.5;
     margin-bottom: 0;
 }
@@ -89,17 +143,59 @@
 }
 
 .list li {
-    background: #f8f9fa;
-    padding: 1rem 1.5rem;
-    border-radius: 0.5rem;
+    background: var(--cream);
+        padding: 1.2rem 1.5rem;
+        border-radius: var(--card-border-radius);
     margin-bottom: 1rem;
     line-height: 1.5;
+    border: 1px solid var(--border);
+        box-shadow: 0 2px 4px var(--shadow);
+        transition: transform 0.2s ease;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .list li::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('/paper-texture.png');
+        background-repeat: repeat;
+        background-blend-mode: overlay;
+        opacity: 0.3;
+        z-index: 0;
+    }
+    
+    .list li>* {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .list li:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px var(--shadow);
+        border-color: var(--vermilion);
 }
 
 .list li strong {
-    color: #1a1a1a;
+    color: var(--vermilion);
     display: inline-block;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
+        min-width: 120px;
+        font-family: "Noto Serif JP", serif;
+        position: relative;
+    }
+    
+    .list li strong::after {
+        content: '—';
+        position: absolute;
+        right: 0;
+        color: var(--wood-light);
 }
 
 @media (max-width: 768px) {
@@ -122,4 +218,16 @@
     .grid {
         grid-template-columns: 1fr;
     }
+.list li {
+    flex-direction: column;
+}
+
+.list li strong {
+    margin-bottom: 0.5rem;
+    min-width: auto;
+}
+
+.list li strong::after {
+    display: none;
+}
 }

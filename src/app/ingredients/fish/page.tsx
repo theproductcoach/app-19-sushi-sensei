@@ -14,7 +14,7 @@ const commonFish: SeafoodItem[] = [
     texture: "Firm yet tender, melts in your mouth",
     seasonality: ["Winter", "Spring"],
     commonPreparations: ["Sashimi", "Nigiri", "Tuna rolls"],
-    imageUrl: "/ingredients/tuna-bluefin.jpg",
+    imageUrl: "/ingredients/tuna-bluefin.png",
     nutrition: {
       protein: "23g per 100g",
       omega3: "High",
@@ -32,7 +32,7 @@ const commonFish: SeafoodItem[] = [
     texture: "Soft, buttery, tender",
     seasonality: ["Year-round"],
     commonPreparations: ["Nigiri", "Salmon rolls", "Sashimi"],
-    imageUrl: "/ingredients/salmon.jpg",
+    imageUrl: "/ingredients/salmon.png",
     nutrition: {
       protein: "20g per 100g",
       omega3: "Very high",
@@ -50,7 +50,7 @@ const commonFish: SeafoodItem[] = [
     texture: "Firm yet fatty",
     seasonality: ["Winter"],
     commonPreparations: ["Sashimi", "Nigiri", "Rolls"],
-    imageUrl: "/ingredients/yellowtail.jpg",
+    imageUrl: "/ingredients/yellowtail.png",
     nutrition: {
       protein: "23g per 100g",
       omega3: "High",
