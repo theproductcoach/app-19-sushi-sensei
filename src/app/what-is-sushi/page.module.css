@@ -1,0 +1,241 @@
+.main {
+    min-height: 100vh;
+    background-color: var(--paper-light);
+    padding-bottom: 4rem;
+}
+
+.hero {
+    background: var(--indigo);
+    background-image: url('/wood-texture-dark.png');
+    background-blend-mode: overlay;
+    color: var(--cream);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    border-bottom: 2px solid var(--wood-dark);
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--vermilion), var(--wood-light));
+    opacity: 0.6;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: "Noto Serif JP", serif;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.section h2 {
+    color: var(--vermilion);
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    border-bottom: 3px solid var(--vermilion);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    position: relative;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    background: var(--cream);
+    padding: 1.8rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow);
+}
+
+.card h3 {
+    color: var(--vermilion);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--wood-dark);
+    padding-bottom: 0.5rem;
+    font-family: "Noto Serif JP", serif;
+}
+
+.card p {
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.list li {
+    background: var(--cream);
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.7;
+    border: 1px solid var(--wood-dark);
+    transition: transform 0.2s ease;
+    background-image: url('/paper-texture.png');
+    color: var(--text-primary);
+}
+
+.list li:hover {
+    transform: translateX(5px);
+}
+
+.list li strong {
+    color: var(--vermilion);
+    margin-right: 1rem;
+    min-width: 120px;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: "Noto Serif JP", serif;
+}
+
+.list li strong::after {
+    content: '—';
+    position: absolute;
+    right: 0;
+    color: var(--wood-light);
+}
+
+.navigation {
+    background: var(--indigo);
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    margin-top: 4rem;
+    background-image: url('/wood-texture-dark.png');
+    background-blend-mode: overlay;
+    border: 1px solid var(--wood-dark);
+}
+
+.navigation h2 {
+    color: var(--cream);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-family: "Noto Serif JP", serif;
+}
+
+.navGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.navCard {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: var(--cream);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(229, 211, 179, 0.2);
+}
+
+.navCard:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+    border-color: var(--cream);
+}
+
+.navCard h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--cream);
+    font-family: "Noto Serif JP", serif;
+}
+
+.navCard p {
+    opacity: 0.9;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .content {
+        padding: 0 1rem;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .list li {
+        flex-direction: column;
+        padding: 1.2rem;
+    }
+
+    .list li strong {
+        margin-bottom: 0.5rem;
+        min-width: auto;
+    }
+
+    .list li strong::after {
+        display: none;
+    }
+
+    .navigation {
+        padding: 2rem 1rem;
+    }
+
+    .navCard h3 {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,199 @@
+.main {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.hero {
+  background: linear-gradient(to bottom, #1a1a1a, #333333);
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  position: relative;
+  height: 300px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.japaneseName {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.details {
+  padding: 1.5rem;
+}
+
+.details header {
+  margin-bottom: 1.5rem;
+}
+
+.details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.scientific {
+  font-style: italic;
+  color: #666;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.description {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.properties {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+}
+
+.properties h4 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.properties p {
+  color: #333;
+  line-height: 1.4;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.info h4 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info li {
+  background: #f3f4f6;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 0.875rem;
+}
+
+.nutrition {
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+.nutrition h4 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.nutrition ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.nutrition li {
+  background: #f3f4f6;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: #333;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .properties,
+  .info {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .imageContainer {
+    height: 250px;
+  }
+}

@@ -32,6 +32,8 @@
   flex-direction: column;
   gap: 32px;
   grid-row-start: 2;
+  min-height: 100vh;
+    background-color: #ffffff;
 }
 
 .main ol {
@@ -164,5 +166,206 @@ a.secondary {
 @media (prefers-color-scheme: dark) {
   .logo {
     filter: invert();
+  }
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.backgroundImage {
+  object-fit: cover;
+  opacity: 0.15;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+}
+
+.heroContent h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #FF0000;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heroContent p {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.button {
+  display: inline-block;
+  background-color: #FF0000;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid #FF0000;
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
+}
+
+.button:hover {
+  background-color: #E60000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 0, 0, 0.2);
+}
+
+/* Features Section */
+.features {
+  padding: 5rem 0;
+  background-color: #ffffff;
+}
+
+.features.altBackground {
+  background-color: #FFF5F5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #FF0000;
+  margin-bottom: 3rem;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.featureCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  border: 1px solid #FFE5E5;
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.05);
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(255, 0, 0, 0.1);
+  border-color: #FF0000;
+}
+
+.featureIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.featureCard h3 {
+  color: #FF0000;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.featureCard p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Quick Start Guide */
+.quickStart {
+  background-color: #FFF5F5;
+  padding: 5rem 0;
+}
+
+.stepsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stepCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid #FFE5E5;
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.05);
+}
+
+.stepCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(255, 0, 0, 0.1);
+  border-color: #FF0000;
+}
+
+.stepNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FF0000;
+  opacity: 0.8;
+}
+
+.stepContent h3 {
+  color: #FF0000;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.stepContent p {
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 3rem;
+  }
+
+  .heroContent p {
+    font-size: 1.2rem;
+  }
+
+  .button {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .features h2 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 1rem;
   }
 }

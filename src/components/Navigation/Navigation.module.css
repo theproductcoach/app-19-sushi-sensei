@@ -1,0 +1,107 @@
+.nav {
+    background: var(--indigo);
+    border-bottom: 2px solid var(--wood-dark);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0.75rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-image: url('/wood-texture-dark.png');
+    background-blend-mode: overlay;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--cream);
+}
+
+.kanji {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cream);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.links a {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--vermilion);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.links a:hover {
+    color: #fff;
+}
+
+.links a:hover::after {
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .links a {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .kanji {
+        font-size: 1.5rem;
+    }
+
+    .text {
+        font-size: 1.2rem;
+    }
+}
