@@ -1,32 +1,32 @@
 .main {
     min-height: calc(100vh - var(--nav-height));
-        background-color: var(--background);
+    background-color: var(--background);
         padding-bottom: 2rem;
 }
 
 .hero {
-    background: var(--indigo);
-        background-image: url('/wood-texture-dark.png');
-        background-blend-mode: overlay;
-        color: var(--cream);
-    padding: 4rem 1rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    border-bottom: 2px solid var(--wood-dark);
+    position: relative;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: var(--paper-light);
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+        font-weight: 700;
+        color: var(--vermilion);
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     font-family: "Noto Serif JP", serif;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero p {
-    font-size: 1.25rem;
-    max-width: 600px;
-    margin: 0 auto;
-    opacity: 0.9;
+    font-size: 1.5rem;
+        color: var(--text-primary);
+        margin-bottom: 2rem;
 }
 
 .content {

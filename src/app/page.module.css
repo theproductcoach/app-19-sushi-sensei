@@ -6,13 +6,10 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
+  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--paper-light);
   font-family: var(--font-geist-sans);
 }
 
@@ -28,11 +25,14 @@
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 4rem);
-    /* Subtract navigation height */
-    background-color: var(--background);
+  flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .main ol {
@@ -59,38 +59,48 @@
 
 .ctas {
   display: flex;
-  gap: 16px;
+  gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem 0;
 }
 
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
   cursor: pointer;
-  display: flex;
+  font-size: 1.1rem;
+    text-decoration: none;
+    display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
+  gap: 0.5rem;
 }
 
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
+.primary {
+  background-color: var(--vermilion);
+  color: white;
+  border: none;
 }
 
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 158px;
+.primary:hover {
+  background-color: var(--vermilion-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--vermilion);
+  border: 2px solid var(--vermilion);
+}
+
+.secondary:hover {
+  background-color: var(--vermilion);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .footer {
@@ -111,53 +121,25 @@ a.secondary {
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
   .footer a:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
   }
 }
 
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
+@media (max-width: 768px) {
   .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
+    grid-template-columns: 1fr;
+      padding: 1rem;
   }
 
   .ctas {
     flex-direction: column;
+    align-items: stretch;
   }
 
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
+        .button {
+          width: 100%;
     justify-content: center;
   }
 }
@@ -172,11 +154,14 @@ a.secondary {
 .hero {
   position: relative;
   min-height: 80vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   background-color: var(--paper-light);
+  padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .heroBackground {
@@ -196,44 +181,26 @@ a.secondary {
 .heroContent {
   position: relative;
   z-index: 2;
-  text-align: center;
-  padding: 2rem;
+  max-width: var(--container-width);
+    margin: 0 auto;
 }
 
-.heroContent h1 {
+.hero h1 {
   font-size: 4rem;
   font-weight: 700;
   color: var(--vermilion);
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    font-family: "Noto Serif JP", serif;
+  font-family: "Noto Serif JP", serif;
 }
 
-.heroContent p {
+.hero p {
   font-size: 1.5rem;
   color: var(--text-primary);
   margin-bottom: 2rem;
-}
-
-.button {
-  display: inline-block;
-  background-color: var(--vermilion);
-    color: var(--cream);
-  padding: 1rem 2.5rem;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: 2px solid var(--vermilion);
-    box-shadow: 0 4px 6px var(--shadow);
-}
-
-.button:hover {
-  background-color: var(--indigo);
-    border-color: var(--indigo);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px var(--shadow);
+  max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Features Section */

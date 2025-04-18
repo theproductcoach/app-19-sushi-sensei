@@ -210,3 +210,48 @@ img {
     font-size: 1rem;
   }
 }
+
+/* Shared hero section styling */
+.page-hero {
+  background: var(--indigo);
+  background-image: url('/wood-texture-dark.png');
+  background-blend-mode: overlay;
+  color: var(--cream);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-bottom: 2px solid var(--wood-dark);
+  position: relative;
+}
+
+.page-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: "Noto Serif JP", serif;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: 700;
+}
+
+.page-hero p {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 1;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  color: white;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 3rem 1rem;
+  }
+
+  .page-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .page-hero p {
+    font-size: 1.1rem;
+  }
+}

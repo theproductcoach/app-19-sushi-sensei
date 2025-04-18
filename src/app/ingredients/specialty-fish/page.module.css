@@ -4,22 +4,15 @@
 }
 
 .hero {
-  background: linear-gradient(to bottom, #1a1a1a, #333333);
-  color: white;
-  padding: 4rem 1rem;
-  text-align: center;
+  composes: hero from global;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  composes: h1 from global;
 }
 
 .hero p {
-  font-size: 1.25rem;
-  max-width: 600px;
-  margin: 0 auto;
-  opacity: 0.9;
+  composes: p from global;
 }
 
 .content {

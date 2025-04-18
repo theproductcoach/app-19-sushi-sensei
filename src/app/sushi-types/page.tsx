@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Card from "@/components/Card";
 
 type SushiType = {
   id: string;
@@ -114,7 +115,7 @@ export default function SushiTypes() {
 
         <div className={styles.grid}>
           {sushiTypes.map((sushi) => (
-            <article key={sushi.id} className={styles.card}>
+            <Card key={sushi.id} className={styles.sushiCard}>
               <div className={styles.imageContainer}>
                 <Image
                   src={sushi.imageUrl}
@@ -139,7 +140,7 @@ export default function SushiTypes() {
                   </ul>
                 </div>
               </div>
-            </article>
+            </Card>
           ))}
         </div>
       </section>
