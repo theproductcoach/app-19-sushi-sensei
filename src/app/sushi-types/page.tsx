@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Card from "@/components/Card";
+import Hero from "@/components/Hero";
 
 type SushiType = {
   id: string;
@@ -89,61 +90,62 @@ const sushiTypes: SushiType[] = [
   },
 ];
 
-export default function SushiTypes() {
+export default function SushiTypesPage() {
   return (
     <main className={styles.main}>
-      <section className={styles.hero}>
-        <h1>Types of Sushi</h1>
-        <p>
-          Discover the diverse world of sushi, from traditional to modern
-          varieties
-        </p>
-      </section>
+      <Hero
+        title="Types of Sushi"
+        subtitle="Discover the diverse world of sushi, from traditional to modern varieties"
+        backgroundImage="/sushi-types-banner.jpg"
+        backgroundAlt="Various types of sushi on a traditional wooden board"
+      />
 
-      <section className={styles.content}>
-        <div className={styles.filters}>
-          <h2>Categories</h2>
-          <ul>
-            <li className={styles.active}>All Types</li>
-            <li>Nigiri</li>
-            <li>Maki</li>
-            <li>Sashimi</li>
-            <li>Temaki</li>
-            <li>Uramaki</li>
-          </ul>
-        </div>
+      <div className={styles.content}>
+        <section className={styles.content}>
+          <div className={styles.filters}>
+            <h2>Categories</h2>
+            <ul>
+              <li className={styles.active}>All Types</li>
+              <li>Nigiri</li>
+              <li>Maki</li>
+              <li>Sashimi</li>
+              <li>Temaki</li>
+              <li>Uramaki</li>
+            </ul>
+          </div>
 
-        <div className={styles.grid}>
-          {sushiTypes.map((sushi) => (
-            <Card key={sushi.id} className={styles.sushiCard}>
-              <div className={styles.imageContainer}>
-                <Image
-                  src={sushi.imageUrl}
-                  alt={sushi.name}
-                  width={400}
-                  height={300}
-                  className={styles.image}
-                  priority={sushi.id === "nigiri-salmon"}
-                />
-                <span className={styles.category}>{sushi.category}</span>
-              </div>
-              <div className={styles.cardContent}>
-                <h3>{sushi.name}</h3>
-                <p className={styles.japaneseName}>{sushi.japameseName}</p>
-                <p className={styles.description}>{sushi.description}</p>
-                <div className={styles.ingredients}>
-                  <h4>Key Ingredients:</h4>
-                  <ul>
-                    {sushi.ingredients.map((ingredient, index) => (
-                      <li key={index}>{ingredient}</li>
-                    ))}
-                  </ul>
+          <div className={styles.grid}>
+            {sushiTypes.map((sushi) => (
+              <Card key={sushi.id} className={styles.sushiCard}>
+                <div className={styles.imageContainer}>
+                  <Image
+                    src={sushi.imageUrl}
+                    alt={sushi.name}
+                    width={400}
+                    height={300}
+                    className={styles.image}
+                    priority={sushi.id === "nigiri-salmon"}
+                  />
+                  <span className={styles.category}>{sushi.category}</span>
                 </div>
-              </div>
-            </Card>
-          ))}
-        </div>
-      </section>
+                <div className={styles.cardContent}>
+                  <h3>{sushi.name}</h3>
+                  <p className={styles.japaneseName}>{sushi.japameseName}</p>
+                  <p className={styles.description}>{sushi.description}</p>
+                  <div className={styles.ingredients}>
+                    <h4>Key Ingredients:</h4>
+                    <ul>
+                      {sushi.ingredients.map((ingredient, index) => (
+                        <li key={index}>{ingredient}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
+      </div>
     </main>
   );
 }

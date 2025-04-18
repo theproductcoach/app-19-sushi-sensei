@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Card from "@/components/Card";
+import Hero from "@/components/Hero";
 import type { IngredientItem } from "../types";
 
 const ingredients: IngredientItem[] = [
@@ -70,21 +71,12 @@ const ingredients: IngredientItem[] = [
 export default function RiceAndVinegarPage() {
   return (
     <main className={styles.main}>
-      <section className={styles.hero}>
-        <div className={styles.heroBackground}>
-          <Image
-            src="/rice-banner.png"
-            alt="Sushi rice and vinegar preparation"
-            fill
-            className={styles.backgroundImage}
-            priority
-          />
-        </div>
-        <div className={styles.heroContent}>
-          <h1>Rice & Vinegar</h1>
-          <p>The essential foundation of sushi-making</p>
-        </div>
-      </section>
+      <Hero
+        title="Rice & Vinegar"
+        subtitle="The essential foundation of sushi-making"
+        backgroundImage="/rice-banner.png"
+        backgroundAlt="Sushi rice and vinegar preparation"
+      />
 
       <div className={styles.content}>
         <div className={styles.grid}>
