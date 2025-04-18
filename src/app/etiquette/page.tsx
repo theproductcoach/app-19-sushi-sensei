@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import Card from "@/components/Card";
 
 export default function EtiquettePage() {
   return (
@@ -13,50 +14,94 @@ export default function EtiquettePage() {
 
       <div className={styles.content}>
         <section className={styles.section}>
-          <h2>Essential Do&apos;s and Don&apos;ts</h2>
+          <h2>Essential Guidelines</h2>
           <div className={styles.grid}>
-            <div className={styles.card}>
-              <h3>Do&apos;s</h3>
+            <Card>
+              <h3>Chopstick Basics</h3>
               <ul className={styles.list}>
                 <li>
-                  <strong>Clean Hands</strong> Use the provided oshibori (hot
-                  towel) to clean your hands before eating
+                  <strong>Proper Holding</strong>
+                  Hold chopsticks towards their end, not in the middle
                 </li>
                 <li>
-                  <strong>Chopsticks</strong> Place them on the holder when not
-                  in use, pointing left
+                  <strong>No Rubbing</strong>
+                  Don't rub chopsticks together - it's considered rude
                 </li>
                 <li>
-                  <strong>Soy Sauce</strong> Pour a small amount and dip
-                  fish-side down
-                </li>
-                <li>
-                  <strong>Appreciation</strong> Thank the chef by saying
-                  &lsquo;Gochisousama deshita&lsquo; after finishing
+                  <strong>Between Bites</strong>
+                  Rest chopsticks on the holder, not across your plate
                 </li>
               </ul>
-            </div>
-            <div className={styles.card}>
-              <h3>Don&apos;ts</h3>
+            </Card>
+
+            <Card>
+              <h3>Eating Sushi</h3>
               <ul className={styles.list}>
                 <li>
-                  <strong>Wasabi Mix</strong> Don&apos;t mix wasabi into your soy
-                  sauce
+                  <strong>One Bite</strong>
+                  Eat nigiri in one bite when possible
                 </li>
                 <li>
-                  <strong>Rice First</strong> Don&apos;t dip the rice side into soy
-                  sauce
+                  <strong>Fish Side</strong>
+                  Turn nigiri upside down, fish-side down on your tongue
                 </li>
                 <li>
-                  <strong>Chopsticks</strong> Don&apos;t rub them together or point
-                  them at others
-                </li>
-                <li>
-                  <strong>Piece Size</strong> Don&apos;t cut pieces in half; eat them
-                  in one bite
+                  <strong>No Wasabi</strong>
+                  Don't add wasabi if it's already inside
                 </li>
               </ul>
-            </div>
+            </Card>
+          </div>
+        </section>
+
+        <section className={styles.section}>
+          <h2>Soy Sauce Etiquette</h2>
+          <div className={styles.grid}>
+            <Card>
+              <h3>Proper Technique</h3>
+              <p>
+                Dip fish-side only, briefly, in soy sauce. Rice should never
+                touch the sauce.
+              </p>
+            </Card>
+            <Card>
+              <h3>Amount</h3>
+              <p>Use soy sauce sparingly. Don't fill the dish to the brim.</p>
+            </Card>
+            <Card>
+              <h3>Mixing</h3>
+              <p>
+                Never mix wasabi into your soy sauce - it's considered
+                disrespectful.
+              </p>
+            </Card>
+          </div>
+        </section>
+
+        <section className={styles.section}>
+          <h2>At the Sushi Bar</h2>
+          <div className={styles.grid}>
+            <Card>
+              <h3>Seating</h3>
+              <p>
+                Sit at the counter when possible - it shows respect and interest
+                in the craft.
+              </p>
+            </Card>
+            <Card>
+              <h3>Interaction</h3>
+              <p>
+                Feel free to ask questions, but be mindful of the chef's
+                concentration.
+              </p>
+            </Card>
+            <Card>
+              <h3>Ordering</h3>
+              <p>
+                Trust the chef's recommendations and consider ordering "omakase"
+                style.
+              </p>
+            </Card>
           </div>
         </section>
 
@@ -74,17 +119,17 @@ export default function EtiquettePage() {
             <div className={styles.card}>
               <h3>Maki Rolls</h3>
               <p>
-                Eat maki rolls in one bite when possible. For larger rolls, it&apos;s
-                acceptable to eat in two bites. No need to dip if sauce is
-                already applied.
+                Eat maki rolls in one bite when possible. For larger rolls,
+                it&apos;s acceptable to eat in two bites. No need to dip if
+                sauce is already applied.
               </p>
             </div>
             <div className={styles.card}>
               <h3>Ginger (Gari)</h3>
               <p>
                 Use pickled ginger as a palate cleanser between different types
-                of sushi. Don&apos;t eat it on top of your sushi or mix it with other
-                ingredients.
+                of sushi. Don&apos;t eat it on top of your sushi or mix it with
+                other ingredients.
               </p>
             </div>
           </div>
@@ -105,13 +150,13 @@ export default function EtiquettePage() {
             </li>
             <li>
               <strong>Chef&apos;s Choice</strong>
-              Consider ordering &lsquo;omakase&lsquo; to experience the chef&apos;s selection of
-              the day&apos;s best offerings
+              Consider ordering &lsquo;omakase&lsquo; to experience the
+              chef&apos;s selection of the day&apos;s best offerings
             </li>
             <li>
               <strong>Pace</strong>
-              Eat each piece soon after it&apos;s served; don&apos;t let sushi sit for too
-              long
+              Eat each piece soon after it&apos;s served; don&apos;t let sushi
+              sit for too long
             </li>
           </ul>
         </section>
@@ -130,8 +175,8 @@ export default function EtiquettePage() {
             <div className={styles.card}>
               <h3>Drinking Customs</h3>
               <p>
-                When drinking sake or beer, it&apos;s polite to pour for others and
-                let them pour for you. Never pour your own drink first.
+                When drinking sake or beer, it&apos;s polite to pour for others
+                and let them pour for you. Never pour your own drink first.
               </p>
             </div>
             <div className={styles.card}>

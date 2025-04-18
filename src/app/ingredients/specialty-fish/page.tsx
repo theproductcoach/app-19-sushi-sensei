@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Card from "@/components/Card";
 import type { SeafoodItem } from "../types";
 
 const specialtyFish: SeafoodItem[] = [
@@ -70,37 +71,33 @@ export default function SpecialtyFishPage() {
       <section className={styles.hero}>
         <h1>Specialty Fish</h1>
         <p>
-          Discover premium and seasonal fish varieties cherished in sushi
-          cuisine
+          Discover unique and seasonal fish varieties used in high-end sushi
         </p>
       </section>
 
-      <section className={styles.content}>
+      <div className={styles.content}>
         <div className={styles.grid}>
           {specialtyFish.map((fish) => (
-            <article key={fish.id} className={styles.card}>
+            <Card key={fish.id} className={styles.fishCard}>
               <div className={styles.imageContainer}>
                 <Image
                   src={fish.imageUrl}
                   alt={fish.name}
+                  className={styles.image}
                   width={400}
                   height={300}
-                  className={styles.image}
                 />
-                <h2 className={styles.japaneseName}>{fish.japaneseName}</h2>
+                <p className={styles.japaneseName}>{fish.japaneseName}</p>
               </div>
               <div className={styles.details}>
                 <header>
                   <h3>{fish.name}</h3>
-                  {fish.scientificName && (
-                    <p className={styles.scientific}>{fish.scientificName}</p>
-                  )}
+                  <p className={styles.scientific}>{fish.scientificName}</p>
                 </header>
                 <p className={styles.description}>{fish.description}</p>
-
                 <div className={styles.properties}>
                   <div>
-                    <h4>Taste</h4>
+                    <h4>Taste Profile</h4>
                     <p>{fish.taste}</p>
                   </div>
                   <div>
@@ -108,7 +105,6 @@ export default function SpecialtyFishPage() {
                     <p>{fish.texture}</p>
                   </div>
                 </div>
-
                 <div className={styles.info}>
                   <div>
                     <h4>Best Seasons</h4>
@@ -127,28 +123,29 @@ export default function SpecialtyFishPage() {
                     </ul>
                   </div>
                 </div>
-
-                {fish.nutrition && (
-                  <div className={styles.nutrition}>
-                    <h4>Nutrition Facts</h4>
-                    <ul>
-                      {fish.nutrition.protein && (
-                        <li>Protein: {fish.nutrition.protein}</li>
-                      )}
-                      {fish.nutrition.omega3 && (
-                        <li>Omega-3: {fish.nutrition.omega3}</li>
-                      )}
-                      {fish.nutrition.calories && (
-                        <li>Calories: {fish.nutrition.calories}</li>
-                      )}
-                    </ul>
-                  </div>
-                )}
+                <div className={styles.nutrition}>
+                  <h4>Key Nutrients</h4>
+                  <ul>
+                    {fish.nutrition && (
+                      <>
+                        {fish.nutrition.protein && (
+                          <li>Protein: {fish.nutrition.protein}</li>
+                        )}
+                        {fish.nutrition.calories && (
+                          <li>Calories: {fish.nutrition.calories}</li>
+                        )}
+                        {fish.nutrition.omega3 && (
+                          <li>Omega-3: {fish.nutrition.omega3}</li>
+                        )}
+                      </>
+                    )}
+                  </ul>
+                </div>
               </div>
-            </article>
+            </Card>
           ))}
         </div>
-      </section>
+      </div>
     </main>
   );
 }

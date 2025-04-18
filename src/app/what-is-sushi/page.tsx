@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 import Navigation from "@/components/Navigation/Navigation";
+import Image from "next/image";
 
 export default function WhatIsSushiPage() {
   return (
@@ -8,10 +9,22 @@ export default function WhatIsSushiPage() {
       <Navigation />
       <main className={styles.main}>
         <div className={styles.hero}>
-          <h1>What is Sushi?</h1>
-          <p>
-            A beginner&apos;s guide to understanding and appreciating Japanese sushi
-          </p>
+          <div className={styles.heroBackground}>
+            <Image
+              src="/sushi-platter-dark.png"
+              alt="Various types of sushi"
+              fill
+              className={styles.backgroundImage}
+              priority
+            />
+          </div>
+          <div className={styles.heroContent}>
+            <h1>What is Sushi?</h1>
+            <p>
+              A beginner&apos;s guide to understanding and appreciating Japanese
+              sushi
+            </p>
+          </div>
         </div>
 
         <div className={styles.content}>
@@ -68,8 +81,9 @@ export default function WhatIsSushiPage() {
               <div className={styles.card}>
                 <h3>Uramaki</h3>
                 <p>
-                &lsquo;Inside-out&lsquo; rolls with rice on the outside and nori inside.
-                  Popular worldwide, including the famous California Roll.
+                  &lsquo;Inside-out&lsquo; rolls with rice on the outside and
+                  nori inside. Popular worldwide, including the famous
+                  California Roll.
                 </p>
               </div>
               <div className={styles.card}>
@@ -128,8 +142,8 @@ export default function WhatIsSushiPage() {
                 <h3>Ask Questions</h3>
                 <p>
                   Don&apos;t be afraid to ask your sushi chef or server for
-                  recommendations and explanations. They&apos;re usually happy to
-                  guide beginners.
+                  recommendations and explanations. They&apos;re usually happy
+                  to guide beginners.
                 </p>
               </div>
             </div>

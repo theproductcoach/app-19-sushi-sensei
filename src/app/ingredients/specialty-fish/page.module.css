@@ -1,22 +1,35 @@
 .main {
-  min-height: 100vh;
-  background-color: #f9fafb;
+  min-height: calc(100vh - var(--nav-height));
+    background-color: var(--background);
 }
 
 .hero {
-  composes: hero from global;
+  position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: var(--paper-light);
 }
 
 .hero h1 {
-  composes: h1 from global;
+  font-size: 4rem;
+    font-weight: 700;
+    color: var(--vermilion);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: "Noto Serif JP", serif;
 }
 
 .hero p {
-  composes: p from global;
+  font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
 }
 
 .content {
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: 0 auto;
   padding: 2rem 1rem;
 }
@@ -43,12 +56,19 @@
 .imageContainer {
   position: relative;
   height: 300px;
+  overflow: hidden;
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
 }
 
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+  }
+  
+  .fishCard:hover .image {
+    transform: scale(1.05);
 }
 
 .japaneseName {
@@ -74,18 +94,19 @@
 .details h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: var(--vermilion);
+    font-family: "Noto Serif JP", serif;
 }
 
 .scientific {
   font-style: italic;
-  color: #666;
+  color: var(--text-secondary);
   font-size: 0.875rem;
   margin: 0;
 }
 
 .description {
-  color: #333;
+  color: var(--text-primary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -96,18 +117,18 @@
   gap: 1.5rem;
   margin-bottom: 1.5rem;
   padding: 1rem;
-  background: #f8f9fa;
+  background: var(--paper-light);
   border-radius: 0.5rem;
 }
 
 .properties h4 {
   font-size: 1rem;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 0.5rem;
 }
 
 .properties p {
-  color: #333;
+  color: var(--text-primary);
   line-height: 1.4;
 }
 
@@ -120,7 +141,7 @@
 
 .info h4 {
   font-size: 1rem;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 0.75rem;
 }
 
@@ -131,22 +152,22 @@
 }
 
 .info li {
-  background: #f3f4f6;
+  background: var(--paper-light);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: var(--text-primary);
   font-size: 0.875rem;
 }
 
 .nutrition {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border);
   padding-top: 1.5rem;
 }
 
 .nutrition h4 {
   font-size: 1rem;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 0.75rem;
 }
 
@@ -160,10 +181,10 @@
 }
 
 .nutrition li {
-  background: #f3f4f6;
+  background: var(--paper-light);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  color: #333;
+  color: var(--text-primary);
   font-size: 0.875rem;
 }
 

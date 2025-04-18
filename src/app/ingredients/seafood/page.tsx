@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Card from "@/components/Card";
 import type { SeafoodItem } from "../types";
 
 const otherSeafood: SeafoodItem[] = [
@@ -77,23 +78,34 @@ export default function OtherSeafoodPage() {
   return (
     <main className={styles.main}>
       <section className={styles.hero}>
-        <h1>Other Seafood</h1>
-        <p>Explore the diverse world of non-fish seafood in sushi</p>
+        <div className={styles.heroBackground}>
+          <Image
+            src="/seafood-platter.jpg"
+            alt="Various seafood ingredients"
+            fill
+            className={styles.backgroundImage}
+            priority
+          />
+        </div>
+        <div className={styles.heroContent}>
+          <h1>Other Seafood</h1>
+          <p>Explore non-fish seafood ingredients used in sushi</p>
+        </div>
       </section>
 
-      <section className={styles.content}>
+      <div className={styles.content}>
         <div className={styles.grid}>
           {otherSeafood.map((seafood) => (
-            <article key={seafood.id} className={styles.card}>
+            <Card key={seafood.id} className={styles.seafoodCard}>
               <div className={styles.imageContainer}>
                 <Image
                   src={seafood.imageUrl}
                   alt={seafood.name}
+                  className={styles.image}
                   width={400}
                   height={300}
-                  className={styles.image}
                 />
-                <h2 className={styles.japaneseName}>{seafood.japaneseName}</h2>
+                <p className={styles.japaneseName}>{seafood.japaneseName}</p>
               </div>
               <div className={styles.details}>
                 <header>
@@ -153,10 +165,10 @@ export default function OtherSeafoodPage() {
                   </div>
                 )}
               </div>
-            </article>
+            </Card>
           ))}
         </div>
-      </section>
+      </div>
     </main>
   );
 }

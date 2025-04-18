@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+import Card from "@/components/Card";
 
 export default function Home() {
   return (
@@ -111,21 +112,27 @@ export default function Home() {
         <div className={styles.container}>
           <h2>Learning Path</h2>
           <div className={styles.stepsContainer}>
-            <StepCard
-              number="01"
-              title="Learn the Basics"
-              description="Start with sushi types and essential etiquette"
-            />
-            <StepCard
-              number="02"
-              title="Explore Ingredients"
-              description="Discover the various fish and seafood used in sushi"
-            />
-            <StepCard
-              number="03"
-              title="Master Appreciation"
-              description="Understand flavors, textures, and seasonal selections"
-            />
+            <Card className={styles.stepCard}>
+              <span className={styles.stepNumber}>01</span>
+              <div className={styles.stepContent}>
+                <h3>Learn the Basics</h3>
+                <p>Start with sushi types and essential etiquette</p>
+              </div>
+            </Card>
+            <Card className={styles.stepCard}>
+              <span className={styles.stepNumber}>02</span>
+              <div className={styles.stepContent}>
+                <h3>Explore Ingredients</h3>
+                <p>Discover the various fish and seafood used in sushi</p>
+              </div>
+            </Card>
+            <Card className={styles.stepCard}>
+              <span className={styles.stepNumber}>03</span>
+              <div className={styles.stepContent}>
+                <h3>Master Appreciation</h3>
+                <p>Understand flavors, textures, and seasonal selections</p>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
@@ -161,24 +168,4 @@ function FeatureCard({
   }
 
   return <div className={styles.featureCard}>{content}</div>;
-}
-
-function StepCard({
-  number,
-  title,
-  description,
-}: {
-  number: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className={styles.stepCard}>
-      <div className={styles.stepNumber}>{number}</div>
-      <div className={styles.stepContent}>
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
 }

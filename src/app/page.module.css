@@ -26,13 +26,8 @@
 
 .main {
   flex: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 1440px;
-    margin: 0 auto;
-    width: 100%;
+    display: flex;
+      flex-direction: column;
 }
 
 .main ol {
@@ -66,39 +61,21 @@
 }
 
 .button {
-  padding: 0.75rem 1.5rem;
+  display: inline-block;
+    background-color: var(--vermilion);
+    color: white;
+    padding: 1rem 2rem;
   border-radius: 8px;
+  font-size: 1.2rem;
   font-weight: 600;
+  text-decoration: none;
   transition: all 0.3s ease;
-  cursor: pointer;
-  font-size: 1.1rem;
-    text-decoration: none;
-    display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.primary {
-  background-color: var(--vermilion);
-  color: white;
   border: none;
+  cursor: pointer;
 }
 
-.primary:hover {
+.button:hover {
   background-color: var(--vermilion-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.secondary {
-  background-color: transparent;
-  color: var(--vermilion);
-  border: 2px solid var(--vermilion);
-}
-
-.secondary:hover {
-  background-color: var(--vermilion);
-  color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -128,19 +105,37 @@
 }
 
 @media (max-width: 768px) {
-  .main {
+  .heroContent h1 {
+      font-size: 3rem;
+    }
+  
+    .heroContent p {
+      font-size: 1.2rem;
+    }
+  
+    .features {
+      padding: 3rem 0;
+    }
+  
+    .container {
+      padding: 0 1rem;
+    }
+  
+    .features h2 {
+      font-size: 2rem;
+    }
+  
+    .featureGrid {
     grid-template-columns: 1fr;
-      padding: 1rem;
   }
 
-  .ctas {
-    flex-direction: column;
-    align-items: stretch;
+                .stepsContainer {
+                  grid-template-columns: 1fr;
   }
 
         .button {
-          width: 100%;
-    justify-content: center;
+    padding: 0.8rem 1.5rem;
+      font-size: 1.1rem;
   }
 }
 
@@ -159,9 +154,8 @@
   align-items: center;
   justify-content: center;
   background-color: var(--paper-light);
-  padding: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
 }
 
 .heroBackground {
@@ -176,36 +170,48 @@
 .backgroundImage {
   object-fit: cover;
   opacity: 0.5;
+  width: 100%;
+    height: 100%;
 }
 
 .heroContent {
   position: relative;
   z-index: 2;
+  text-align: center;
+    padding: 2rem;
   max-width: var(--container-width);
-    margin: 0 auto;
+  margin: 0 auto;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.hero h1 {
+.heroContent h1 {
   font-size: 4rem;
   font-weight: 700;
   color: var(--vermilion);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   font-family: "Noto Serif JP", serif;
+  line-height: 1.2;
+    width: 100%;
 }
 
-.hero p {
+.heroContent p {
   font-size: 1.5rem;
   color: var(--text-primary);
   margin-bottom: 2rem;
+  line-height: 1.5;
   max-width: 800px;
-    margin-left: auto;
+  margin-left: auto;
     margin-right: auto;
+  width: 100%;
 }
 
 /* Features Section */
 .features {
-  padding: 5rem 0;
+  padding: 4rem 0;
   background-color: var(--background);
 }
 
@@ -214,7 +220,7 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -231,14 +237,22 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
 }
 
 .featureCard {
-  composes: card from global;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
   text-align: center;
+  padding: 2rem;
   text-decoration: none;
   color: inherit;
+  transition: transform 0.2s ease;
+  }
+  
+  .featureIcon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .featureCard h3 {
@@ -256,7 +270,7 @@
 /* Quick Start Guide */
 .quickStart {
   background-color: var(--paper-light);
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
 .stepsContainer {
@@ -267,7 +281,6 @@
 }
 
 .stepCard {
-  composes: card from global;
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
@@ -290,27 +303,4 @@
 .stepContent p {
   color: var(--text-secondary);
   line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .heroContent h1 {
-    font-size: 3rem;
-  }
-
-  .heroContent p {
-    font-size: 1.2rem;
-  }
-
-  .button {
-    padding: 0.8rem 2rem;
-    font-size: 1.1rem;
-  }
-
-  .features h2 {
-    font-size: 2rem;
-  }
-
-  .container {
-    padding: 0 1rem;
-  }
 }

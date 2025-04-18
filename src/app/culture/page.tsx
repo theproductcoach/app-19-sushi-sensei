@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import Card from "@/components/Card";
 
 export default function CulturePage() {
   return (
@@ -6,29 +7,48 @@ export default function CulturePage() {
       <section className={styles.hero}>
         <h1>Sushi Culture</h1>
         <p>
-          Discover the rich history and traditions behind Japan&apos;s most iconic
-          cuisine
+          Discover the rich history and traditions behind Japan&apos;s most
+          iconic cuisine
         </p>
       </section>
 
       <div className={styles.content}>
         <section className={styles.section}>
-          <h2>History</h2>
-          <p>
-            Sushi&apos;s origins date back to Southeast Asia, where fish was
-            fermented in rice to preserve it. This method spread to Japan around
-            the 8th century. The modern form of sushi (nigiri-zushi) was
-            invented in Edo (now Tokyo) around 1824 by Hanaya Yohei as a
-            fast-food option for workers.
-          </p>
+          <h2>Historical Evolution</h2>
+          <div className={styles.grid}>
+            <Card className={styles.culturalCard}>
+              <h3>Ancient Origins</h3>
+              <p>
+                Sushi originated as a way of preserving fish in fermented rice.
+                The rice was originally discarded, and only the fish was
+                consumed.
+              </p>
+            </Card>
+            <Card className={styles.culturalCard}>
+              <h3>Edo Period Revolution</h3>
+              <p>
+                Modern sushi was invented in Edo (now Tokyo) as fast food for
+                workers. Fresh fish was served on vinegared rice, creating
+                nigiri-zushi.
+              </p>
+            </Card>
+            <Card className={styles.culturalCard}>
+              <h3>Global Phenomenon</h3>
+              <p>
+                Post-WWII, sushi spread globally, adapting to local tastes while
+                maintaining its Japanese essence. The California Roll
+                exemplifies this fusion.
+              </p>
+            </Card>
+          </div>
         </section>
 
         <section className={styles.section}>
           <h2>Cultural Significance</h2>
           <p>
-            Sushi in Japan represents more than just food—it&apos;s an art form and
-            cultural institution. Sushi chefs (itamae) train for years to master
-            their craft, learning everything from knife skills to rice
+            Sushi in Japan represents more than just food—it&apos;s an art form
+            and cultural institution. Sushi chefs (itamae) train for years to
+            master their craft, learning everything from knife skills to rice
             preparation. The preparation and presentation of sushi embodies many
             Japanese cultural values: precision, attention to detail, and
             respect for ingredients.
@@ -77,8 +97,8 @@ export default function CulturePage() {
               and tends to use more cured and cooked ingredients
             </li>
             <li>
-              <strong>Edo Style:</strong> The Tokyo style that&apos;s most recognized
-              globally, featuring nigiri-zushi with fresh fish
+              <strong>Edo Style:</strong> The Tokyo style that&apos;s most
+              recognized globally, featuring nigiri-zushi with fresh fish
             </li>
             <li>
               <strong>Kyushu Style:</strong> Known for using local specialties

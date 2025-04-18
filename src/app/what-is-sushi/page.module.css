@@ -1,46 +1,70 @@
 .main {
     min-height: calc(100vh - var(--nav-height));
-        background-color: var(--background);
+    background-color: var(--background);
     padding-bottom: 4rem;
 }
 
 .hero {
-    background: var(--indigo);
-    background-image: url('/wood-texture-dark.png');
-    background-blend-mode: overlay;
-    color: var(--cream);
-    padding: 4rem 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
     position: relative;
-    border-bottom: 2px solid var(--wood-dark);
+        min-height: 80vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--paper-light);
+    margin-bottom: 2rem;
+    overflow: hidden;
 }
 
-.hero::after {
-    content: '';
+.heroBackground {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--vermilion), var(--wood-light));
-    opacity: 0.6;
+    bottom: 0;
+        z-index: 1;
+    }
+    
+    .backgroundImage {
+        object-fit: cover;
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .heroContent {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 2rem;
+        max-width: var(--container-width);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 }
 
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+.heroContent h1 {
+    font-size: 4rem;
     font-weight: 700;
+    color: var(--vermilion);
+        margin-bottom: 1.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     font-family: "Noto Serif JP", serif;
+    line-height: 1.2;
+        width: 100%;
 }
 
-.hero p {
-    font-size: 1.3rem;
+.heroContent p {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    line-height: 1.5;
     max-width: 800px;
-    margin: 0 auto;
-    opacity: 0.9;
-    line-height: 1.6;
+    margin-left: auto;
+        margin-right: auto;
+        width: 100%;
 }
 
 .content {
