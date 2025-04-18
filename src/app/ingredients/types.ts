@@ -14,4 +14,22 @@ export type SeafoodItem = {
     omega3?: string;
     calories?: string;
   };
-}; 
+};
+
+export interface IngredientItem {
+  id: string;
+  name: string;
+  japaneseName: string;
+  description: string;
+  usage: string;
+  tips: string[];
+  varieties: string[];
+  imageUrl: string;
+  storageInfo: string;
+  nutrition?: {
+    calories?: string;
+    carbs?: string;
+    protein?: string;
+    fiber?: string;
+  };
+} 

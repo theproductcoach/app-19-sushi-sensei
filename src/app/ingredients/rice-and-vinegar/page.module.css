@@ -1,0 +1,283 @@
+.main {
+    min-height: 100vh;
+    background-color: var(--background);
+}
+
+.hero {
+    position: relative;
+    min-height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--paper-dark);
+    overflow: hidden;
+    padding: 4rem 2rem;
+}
+
+.heroBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backgroundImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.8;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroContent h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--vermilion);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: "Noto Serif JP", serif;
+    line-height: 1.2;
+    width: 100%;
+}
+
+.heroContent p {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--cream);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px var(--shadow);
+}
+
+.imageContainer {
+    position: relative;
+    height: 300px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.japaneseName {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.details {
+    padding: 1.5rem;
+}
+
+.details header {
+    margin-bottom: 1.5rem;
+}
+
+.details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--vermilion);
+    font-family: "Noto Serif JP", serif;
+}
+
+.description {
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.usage {
+    background: var(--paper-light);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.usage h4 {
+    color: var(--vermilion);
+    margin-bottom: 0.5rem;
+    font-family: "Noto Serif JP", serif;
+}
+
+.usage p {
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.tips {
+    margin-bottom: 1.5rem;
+}
+
+.tips h4 {
+    color: var(--vermilion);
+    margin-bottom: 1rem;
+    font-family: "Noto Serif JP", serif;
+}
+
+.tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tips li {
+    background: var(--paper-light);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.varieties {
+    margin-bottom: 1.5rem;
+}
+
+.varieties h4 {
+    color: var(--vermilion);
+    margin-bottom: 1rem;
+    font-family: "Noto Serif JP", serif;
+}
+
+.varieties ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.varieties li {
+    background: var(--paper-light);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: var(--text-primary);
+}
+
+.storage {
+    background: var(--paper-light);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.storage h4 {
+    color: var(--vermilion);
+    margin-bottom: 0.5rem;
+    font-family: "Noto Serif JP", serif;
+}
+
+.storage p {
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.preparation {
+    margin-bottom: 1.5rem;
+}
+
+.preparation h4 {
+    color: var(--vermilion);
+    margin-bottom: 1rem;
+    font-family: "Noto Serif JP", serif;
+}
+
+.preparation ol {
+    list-style: none;
+    padding: 0;
+    counter-reset: step;
+}
+
+.preparation li {
+    background: var(--paper-light);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.preparation li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 1rem;
+    color: var(--vermilion);
+    font-weight: bold;
+    font-family: "Noto Serif JP", serif;
+}
+
+@media (max-width: 768px) {
+    .heroContent h1 {
+        font-size: 2.5rem;
+    }
+
+    .heroContent p {
+        font-size: 1.1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .imageContainer {
+        height: 250px;
+    }
+}

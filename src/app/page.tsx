@@ -89,13 +89,13 @@ export default function Home() {
               title="Rice & Vinegar"
               description="The foundation of sushi: perfect rice preparation"
               icon="🍚"
-              href="/ingredients/rice"
+              href="/ingredients/rice-and-vinegar"
             />
             <FeatureCard
               title="Nori & Garnishes"
               description="Seaweed, wasabi, ginger, and other key components"
               icon="🌿"
-              href="/ingredients/garnishes"
+              href="/ingredients/nori-and-garnishes"
             />
             <FeatureCard
               title="Sauces & Seasonings"

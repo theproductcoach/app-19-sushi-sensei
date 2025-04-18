@@ -80,7 +80,7 @@ export default function OtherSeafoodPage() {
       <section className={styles.hero}>
         <div className={styles.heroBackground}>
           <Image
-            src="/seafood-platter.jpg"
+            src="/seafood-platter.png"
             alt="Various seafood ingredients"
             fill
             className={styles.backgroundImage}
@@ -89,7 +89,7 @@ export default function OtherSeafoodPage() {
         </div>
         <div className={styles.heroContent}>
           <h1>Other Seafood</h1>
-          <p>Explore non-fish seafood ingredients used in sushi</p>
+          <p>Explore other seafood ingredients used in sushi</p>
         </div>
       </section>
 
