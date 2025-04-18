@@ -6,7 +6,7 @@ export default function CulturalContextPage() {
     <main className={styles.main}>
       <section className={styles.hero}>
         <h1>Cultural Context</h1>
-        <p>Understanding sushi's place in Japanese culture</p>
+        <p>Understanding sushi&apos;s place in Japanese culture</p>
       </section>
 
       <div className={styles.content}>
@@ -43,7 +43,7 @@ export default function CulturalContextPage() {
             <Card>
               <h3>Global Influence</h3>
               <p>
-                Sushi's global popularity has led to creative adaptations while
+                Sushi&apos;s global popularity has led to creative adaptations while
                 maintaining its Japanese essence.
               </p>
             </Card>
@@ -78,7 +78,7 @@ export default function CulturalContextPage() {
               <h3>Minimalism</h3>
               <p>
                 The simplicity of nigiri sushi embodies the Japanese aesthetic
-                principle of "less is more."
+                principle of &quot;less is more.&quot;
               </p>
             </Card>
             <Card>

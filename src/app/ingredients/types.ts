@@ -32,4 +32,5 @@ export interface IngredientItem {
     protein?: string;
     fiber?: string;
   };
+  preparationSteps?: string[];
 } 

@@ -25,7 +25,7 @@ export default function EtiquettePage() {
                 </li>
                 <li>
                   <strong>No Rubbing</strong>
-                  Don't rub chopsticks together - it's considered rude
+                  Don&apos;t rub chopsticks together - it&apos;s considered rude
                 </li>
                 <li>
                   <strong>Between Bites</strong>
@@ -47,7 +47,7 @@ export default function EtiquettePage() {
                 </li>
                 <li>
                   <strong>No Wasabi</strong>
-                  Don't add wasabi if it's already inside
+                  Don&apos;t add wasabi if it&apos;s already inside
                 </li>
               </ul>
             </Card>
@@ -66,12 +66,12 @@ export default function EtiquettePage() {
             </Card>
             <Card>
               <h3>Amount</h3>
-              <p>Use soy sauce sparingly. Don't fill the dish to the brim.</p>
+              <p>Use soy sauce sparingly. Don&apos;t fill the dish to the brim.</p>
             </Card>
             <Card>
               <h3>Mixing</h3>
               <p>
-                Never mix wasabi into your soy sauce - it's considered
+                Never mix wasabi into your soy sauce - it&apos;s considered
                 disrespectful.
               </p>
             </Card>
@@ -91,14 +91,14 @@ export default function EtiquettePage() {
             <Card>
               <h3>Interaction</h3>
               <p>
-                Feel free to ask questions, but be mindful of the chef's
+                Feel free to ask questions, but be mindful of the chef&apos;s
                 concentration.
               </p>
             </Card>
             <Card>
               <h3>Ordering</h3>
               <p>
-                Trust the chef's recommendations and consider ordering "omakase"
+                Trust the chef&apos;s recommendations and consider ordering &quot;omakase&quot;
                 style.
               </p>
             </Card>
